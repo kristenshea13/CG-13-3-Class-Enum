@@ -7,6 +7,6 @@ namespace CG_13_3_Class_Enum
     public class Student
     {
         public Firstname FirstName { get; set; }
-        public LastName LastName { get; set; }
+        public Lastname LastName { get; set; }
     }
 }
