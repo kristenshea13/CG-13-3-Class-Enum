@@ -12,15 +12,15 @@ namespace CG_13_3_Class_Enum
              * all students in class’ first name.Ask the user to enter 
              * their name. Using a Switch statement, print their last name.*/
 
-            List<Student> students = new List<Student>
+            var students = new List<Student>
             {
                 new Student() {FirstName = Firstname.Kristen, LastName = Lastname.Shea},
                 new Student() {FirstName = Firstname.Adriana, LastName = Lastname.Disano},
                 new Student() {FirstName = Firstname.Angelique, LastName = Lastname.Jacobs},
                 new Student() {FirstName = Firstname.Carla, LastName = Lastname.Huggans},
                 new Student() {FirstName = Firstname.Jane, LastName = Lastname.Brown},
-                //new Student() {FirstName = Firstname.Michelle, LastName = Lastname.Crutcher},
-                //new Student() {FirstName = Firstname.Sabrina, LastName = Lastname.Lindsey},
+                new Student() {FirstName = Firstname.Michelle, LastName = Lastname.Crutcher},
+                new Student() {FirstName = Firstname.Sabrina, LastName = Lastname.Lindsey},
                 //new Student() {FirstName = Firstname.Temeka, LastName = Lastname.Spears},
                 //new Student() {FirstName = Firstname.Agatha, LastName = Lastname.Berwick},
                 //new Student() {FirstName = Firstname.Bennita, LastName = Lastname.Higgins},
@@ -52,38 +52,6 @@ namespace CG_13_3_Class_Enum
 
 
 
-
-              /*foreach (var todo in todos)
-            {
-                switch (todo.Status)
-                {
-                    case Status.NotStarted:
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-                        break;
-                    case Status.InProgress:
-                        Console.ForegroundColor = ConsoleColor.DarkBlue;
-                        break;
-                    case Status.OnHold:
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        break;
-                    case Status.Completed:
-                        Console.ForegroundColor = ConsoleColor.Magenta;
-                        break;
-                    case Status.Deleted:
-                        Console.ForegroundColor = ConsoleColor.White;
-                        break;
-                    default:
-                        break;
-                }
-
-                Console.WriteLine(todo.Description);
-
-            }*/
-            
-
-
-
-
         
 
     }
@@ -92,19 +60,27 @@ namespace CG_13_3_Class_Enum
         {
             foreach (var student in students)
             {
-                var laststnamePrint = student.LastName;
+                var lastnamePrint = student.LastName;
 
-                switch (Student.Firstname)
-)
+                switch (student.FirstName)
                 {
+                    
+
                     case Firstname.Kristen:
-                        lastnamePrint = Lastname.Shea;
-
-
-
-
-                        default:
+                       lastnamePrint = Lastname.Shea;
                         break;
+
+                    case Firstname.Adriana:
+                        lastnamePrint = Lastname.Shea;
+                        break;
+
+                    case Firstname.Angelique:
+                        lastnamePrint = Lastname.Jacobs;
+                        break;
+
+                    default:
+                    break;
+                    
                 }
 
 
@@ -113,8 +89,11 @@ namespace CG_13_3_Class_Enum
 
 
 
+                Console.WriteLine();
 
             }
+
+            
 
         }
 

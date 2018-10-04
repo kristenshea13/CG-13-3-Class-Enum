@@ -8,5 +8,7 @@ namespace CG_13_3_Class_Enum
     {
         public Firstname FirstName { get; set; }
         public Lastname LastName { get; set; }
+
+
     }
 }

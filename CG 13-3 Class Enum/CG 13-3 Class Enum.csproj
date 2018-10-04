@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>CG_13_3_Class_Enum</RootNamespace>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
 </Project>
