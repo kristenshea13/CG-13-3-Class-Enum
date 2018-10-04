@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CG_13_3_Class_Enum
 {
-    class Student
+    public class Student
     {
-        public string FirstName { get; set; }
+        public Firstname FirstName { get; set; }
         public LastName LastName { get; set; }
     }
 }

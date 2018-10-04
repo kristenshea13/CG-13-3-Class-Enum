@@ -14,7 +14,7 @@ namespace CG_13_3_Class_Enum
 
             List<Student> students = new List<Student>
             {
-                new Student() {FirstName = "Kristen", LastName = LastName.Shea},
+                new Student() {FirstName = Firstname.Kristen, LastName = LastName.Shea},
                 new Student() {FirstName = "Adriana", LastName = LastName.Disano},
                 new Student() {FirstName = "Angelique", LastName = LastName.Jacobs},
                 new Student() {FirstName = "Carla", LastName = LastName.Huggans},
@@ -27,9 +27,9 @@ namespace CG_13_3_Class_Enum
                 new Student() {FirstName = "Carolina", LastName = LastName.Oppy},
                 new Student() {FirstName = "Jennifer", LastName = LastName.Faron},
                 new Student() {FirstName = "Madelyn", LastName = LastName.Weller},
-                new Student() {FirstName = "Natalia", LastName = LastName.Solano},
-                new Student() {FirstName = "Sandra", LastName = LastName.Nelson},
-                new Student() {FirstName = "Alicia", LastName = LastName.Reynolds},
+                new Student() {FirstName = Firstname.Natalia, LastName = LastName.Solano},
+                new Student() {FirstName = Firstname.Sandra, LastName = LastName.Nelson},
+                new Student() {FirstName = Firstname.Alicia, LastName = LastName.Reynolds},
                 new Student() {FirstName = "Blake", LastName = LastName.Pickering},
                 new Student() {FirstName = "Diana", LastName = LastName.Peters},
                 new Student() {FirstName = "Kendall", LastName = LastName.Union},
@@ -42,7 +42,7 @@ namespace CG_13_3_Class_Enum
                 new Student() {FirstName = "Kendra", LastName = LastName.Kuhl},
                 new Student() {FirstName = "Melissa", LastName = LastName.Dodd},
                 new Student() {FirstName = "Nichole", LastName = LastName.Church},
-                new Student() {FirstName = "Shelia", LastName = LastName.Wambui}
+                new Student() {FirstName = Firstname.Shelia, LastName = LastName.Wambui}
             };
 
             Console.Write("What is the student's first name? ");
@@ -81,24 +81,31 @@ namespace CG_13_3_Class_Enum
 
                 }
 
-        private static void PrintLastName(List<Student> students)
-        {
-            foreach (var student in students)
-            {
-                switch (Student.FirstName)
-                {
-                    case FirstName.Shelia
-                        LastName.Wambui;
-                        break;
+        //private static void PrintLastName(List<Student> students)
+        //{
+        //    foreach (var student in students)
+        //    {
+        //        var lastnameprint = LastName.Wambui;
+
+        //        switch (Firstname, LastName)
+        //        {
+                    
+        //            case  Firstname.Shelia:
+        //                {
+        //                lastnameprint = LastName.Wambui;
+        //                break;
+        //            } 
+                    
+        //            case
 
 
-                }
+        //        }
 
 
-            }
+        //    }
 
 
-        }
+        //}
 
             
 
@@ -138,36 +145,36 @@ namespace CG_13_3_Class_Enum
         Caldwell
     }
 
-    //enum FirstName
-    //{ 
-        //Kendall,
-        //Diana,
-        //Alicia,
-        //Natalia,
-        //Blake,
-        //Shelia,
-        //Nichole,
-        //Melissa,
-        //Kendra,
-        //Erin,
-        //Breona,
-        //Allison,
-        //Sarah,
-        //Natalie,
-        //Megan,
-        //Kristen,
-        //Adriana,
-        //Madelyn,
-        //Jennifer,
-        //Bennita,
-        //Sandra,
-        //Temeka,
-        //Agatha,
-        //Carolina,
-        //Jane,
-        //Carla,
-        //Angelique,
-        //Sabrina,
-        //Michelle
-    //}
+    enum Firstname
+    {
+        Kendall,
+        Diana,
+        Alicia,
+        Natalia,
+        Blake,
+        Shelia,
+        Nichole,
+        Melissa,
+        Kendra,
+        Erin,
+        Breona,
+        Allison,
+        Sarah,
+        Natalie,
+        Megan,
+        Kristen,
+        Adriana,
+        Madelyn,
+        Jennifer,
+        Bennita,
+        Sandra,
+        Temeka,
+        Agatha,
+        Carolina,
+        Jane,
+        Carla,
+        Angelique,
+        Sabrina,
+        Michelle
+    }
 }
