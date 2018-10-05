@@ -7,65 +7,41 @@ namespace CG_13_3_Class_Enum
     {
         static void Main(string[] args)
         {
-
-            /*Complete a Class Enum program with an enumeration of 
-             * all students in class’ first name.Ask the user to enter 
-             * their name. Using a Switch statement, print their last name.*/
-
-            //var students = new List<Student>
-            //{
-            //    new Student() {FirstName = Firstname.Kristen, LastName = "Shea"},
-            //    new Student() {FirstName = Firstname.Adriana, LastName = "Disano"},
-            //    new Student() {FirstName = Firstname.Angelique, LastName = "Jacobs"},
-            //new Student() {FirstName = Firstname.Carla, LastName = Lastname.Huggans},
-            //new Student() {FirstName = Firstname.Jane, LastName = Lastname.Brown},
-            //new Student() {FirstName = Firstname.Michelle, LastName = Lastname.Crutcher},
-            //new Student() {FirstName = Firstname.Sabrina, LastName = Lastname.Lindsey},
-            //new Student() {FirstName = Firstname.Temeka, LastName = Lastname.Spears},
-            //new Student() {FirstName = Firstname.Agatha, LastName = Lastname.Berwick},
-            //new Student() {FirstName = Firstname.Bennita, LastName = Lastname.Higgins},
-            //new Student() {FirstName = Firstname.Carolina, LastName = Lastname.Oppy},
-            //new Student() {FirstName = Firstname.Jennifer, LastName = Lastname.Faron},
-            //new Student() {FirstName = Firstname.Madelyn, LastName = Lastname.Weller},
-            //new Student() {FirstName = Firstname.Natalia, LastName = Lastname.Solano},
-            //new Student() {FirstName = Firstname.Sandra, LastName = Lastname.Nelson},
-            //new Student() {FirstName = Firstname.Alicia, LastName = Lastname.Reynolds},
-            //new Student() {FirstName = Firstname.Blake, LastName = Lastname.Pickering},
-            //new Student() {FirstName = Firstname.Diana, LastName = Lastname.Peters},
-            //new Student() {FirstName = Firstname.Kendall, LastName = Lastname.Union},
-            //new Student() {FirstName = Firstname.Megan, LastName = Lastname.Hainline},
-            //new Student() {FirstName = Firstname.Natalie, LastName = Lastname.Erdelt},
-            //new Student() {FirstName = Firstname.Sarah, LastName = Lastname.Park},
-            //new Student() {FirstName = Firstname.Allison, LastName = Lastname.Hix},
-            //new Student() {FirstName = Firstname.Breona, LastName = Lastname.Caldwell},
-            //new Student() {FirstName = Firstname.Erin, LastName = Lastname.Hogan},
-            //new Student() {FirstName = Firstname.Kendra, LastName = Lastname.Kuhl},
-            //new Student() {FirstName = Firstname.Melissa, LastName = Lastname.Dodd},
-            //new Student() {FirstName = Firstname.Nichole, LastName = Lastname.Church},
-            //new Student() {FirstName = Firstname.Shelia, LastName = Lastname.Wambui}
-            //};
-
+             
+           //prompt user for first name
             Console.Write("What is the student's first name? ");
+            
+            //take name and assign it as a string with a variable name
             string firstNameEntered = Console.ReadLine();
+
+            //assign variable name to parse to enum value
             Firstname firstnameUser;
+
+            //use Enum.Parse to convert name from string into Enum, 
+            //*true* is so it will ignore case.
             firstnameUser = (Firstname)Enum.Parse(typeof(Firstname), firstNameEntered, true);
 
+            //call on switch to print last name
             PrintLastName(firstnameUser);
 
 
             Console.ReadLine();
         }
 
+
+        /// <summary>
+        /// switch statement to take given enum (first name) and print out last name
+        /// </summary>
+        /// <param name="firstname"></param>
         private static void PrintLastName(Firstname firstname)
         {
-
-
+            //declare variable for last name outside switch statement
             string lastnamePrint;
 
             switch (firstname)
             {
-
-
+                
+                //prints out last name string based on first name enum
                 case Firstname.Kristen:
                     lastnamePrint = "Shea";
                     break;
@@ -74,28 +50,128 @@ namespace CG_13_3_Class_Enum
                     lastnamePrint = "Disano";
                     break;
 
-                //case Firstname.Angelique:
-                //    lastnamePrint = ;
-                //    break;
-
-                default:
-                    lastnamePrint = "";
+                case Firstname.Angelique:
+                    lastnamePrint = "Jacobs";
                     break;
 
+                case Firstname.Carla:
+                    lastnamePrint = "Huggans";
+                    break;
+
+                case Firstname.Jane:
+                    lastnamePrint = "Brown";
+                    break;
+
+                case Firstname.Michelle:
+                    lastnamePrint = "Crutcher";
+                    break;
+
+                case Firstname.Sabrina:
+                    lastnamePrint = "Lindsey";
+                    break;
+
+                case Firstname.Temeka:
+                    lastnamePrint = "Spears";
+                    break;
+
+                case Firstname.Agatha:
+                    lastnamePrint = "Berwick";
+                    break;
+
+                case Firstname.Shelia:
+                    lastnamePrint = "Wambui";
+                    break;
+
+                case Firstname.Bennita:
+                    lastnamePrint = "Higgins";
+                    break;
+
+                case Firstname.Carolina:
+                    lastnamePrint = "Oppy";
+                    break;
+
+                case Firstname.Jennifer:
+                    lastnamePrint = "Faron";
+                    break;
+
+                case Firstname.Nichole:
+                    lastnamePrint = "Church";
+                    break;
+
+                case Firstname.Melissa:
+                    lastnamePrint = "Dodd";
+                    break;
+
+                case Firstname.Kendra:
+                    lastnamePrint = "Kuhl";
+                    break;
+
+                case Firstname.Erin:
+                    lastnamePrint = "Hogan";
+                    break;
+
+                case Firstname.Breona:
+                    lastnamePrint = "Caldwell";
+                    break;
+
+                case Firstname.Allison:
+                    lastnamePrint = "Hix";
+                    break;
+
+                case Firstname.Kendall:
+                    lastnamePrint = "Union";
+                    break;
+
+                case Firstname.Sarah:
+                    lastnamePrint = "Park";
+                    break;
+
+                case Firstname.Sandra:
+                    lastnamePrint = "Nelson";
+                    break;
+
+                case Firstname.Natalia:
+                    lastnamePrint = "Solano";
+                    break;
+
+                case Firstname.Alicia:
+                    lastnamePrint = "Reynolds";
+                    break;
+
+                case Firstname.Diana:
+                    lastnamePrint = "Peters";
+                    break;
+
+                case Firstname.Blake:
+                    lastnamePrint = "Pickering";
+                    break;
+
+                case Firstname.Madelyn:
+                    lastnamePrint = "Weller";
+                    break;
+
+                case Firstname.Megan:
+                    lastnamePrint = "Hainline";
+                    break;
+
+                case Firstname.Natalie:
+                    lastnamePrint = "Erdelt";
+                    break;
+
+                //create catch all string if name entered is not in program
+                default:
+                    lastnamePrint = "Student not in this class.";
+                    break;
             }
 
-
-
-            Console.WriteLine(lastnamePrint);
-
-
-
-
+            Console.WriteLine($"Last name: {lastnamePrint}");
 
         }
 
 
     }
+
+    //created enum, added all first names
     public enum Firstname
     {
         Kendall,
@@ -128,38 +204,5 @@ namespace CG_13_3_Class_Enum
         Sabrina,
         Michelle
     }
-    /*enum Lastname
-        {
-            Shea,
-            Disano,
-            Kuhl,
-            Jacobs,
-            Huggans,
-            Wambui,
-            Brown,
-            Church,
-            Crutcher,
-            Lindsey,
-            Spears,
-            Berwick,
-            Higgins,
-            Oppy,
-            Dodd,
-            Faron,
-            Weller,
-            Solano,
-            Hogan,
-            Nelson,
-            Reynolds,
-            Pickering,
-            Peters,
-            Union,
-            Hainline,
-            Erdelt,
-            Park,
-            Hix,
-            Caldwell
-        }*/
-
-
+    
 }
