@@ -19,7 +19,19 @@ namespace CG_13_3_Class_Enum
 
             //use Enum.Parse to convert name from string into Enum, 
             //*true* is so it will ignore case.
-            firstnameUser = (Firstname)Enum.Parse(typeof(Firstname), firstNameEntered, true);
+            //I was getting an error when I entered a name not on the enum list.
+            //i added try/catch statements. if name is in program, the program will continue
+            //if name is not in program, console will stop running and close
+            try
+            {
+                firstnameUser = (Firstname)Enum.Parse(typeof(Firstname), firstNameEntered, true);
+            }
+
+            catch (Exception)
+            {
+                return;
+            }
+            
 
             //call on switch to print last name
             PrintLastName(firstnameUser);
@@ -160,7 +172,7 @@ namespace CG_13_3_Class_Enum
 
                 //create catch all string if name entered is not in program
                 default:
-                    lastnamePrint = "Student not in this class.";
+                    lastnamePrint = "Student not recognized.";
                     break;
             }
 
