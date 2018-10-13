@@ -1,45 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace CG_13_3_Class_Enum
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-             
-           //prompt user for first name
+            //prompt user for first name
             Console.Write("What is the student's first name? ");
-            
+
             //take name and assign it as a string with a variable name
             string firstNameEntered = Console.ReadLine();
 
             //assign variable name to parse to enum value
             Firstname firstnameUser;
 
-            //use Enum.Parse to convert name from string into Enum, 
+            //use Enum.Parse to convert name from string into Enum,
             //*true* is so it will ignore case.
             //I was getting an error when I entered a name not on the enum list.
             //i added try/catch statements. if name is in program, the program will continue
-            //if name is not in program, console will stop running and close
+            //if name is not in program, program will throw an error and let user know the name
+            //is not on the class list.
             try
             {
                 firstnameUser = (Firstname)Enum.Parse(typeof(Firstname), firstNameEntered, true);
             }
-
-            catch (Exception)
+            catch (Exception ex)
             {
-                return;
+                Console.WriteLine("Name does not exist in class list. {0}", ex.Message);
+                firstnameUser = Firstname.None;
             }
-            
 
             //call on switch to print last name
             PrintLastName(firstnameUser);
 
-
             Console.ReadLine();
         }
-
 
         /// <summary>
         /// switch statement to take given enum (first name) and print out last name
@@ -52,7 +48,6 @@ namespace CG_13_3_Class_Enum
 
             switch (firstname)
             {
-                
                 //prints out last name string based on first name enum
                 case Firstname.Kristen:
                     lastnamePrint = "Shea";
@@ -177,13 +172,11 @@ namespace CG_13_3_Class_Enum
             }
 
             Console.WriteLine($"Last name: {lastnamePrint}");
-
         }
-
-
     }
 
     //created enum, added all first names
+    //added None for when student is not on list.
     public enum Firstname
     {
         Kendall,
@@ -214,7 +207,7 @@ namespace CG_13_3_Class_Enum
         Carla,
         Angelique,
         Sabrina,
-        Michelle
+        Michelle,
+        None
     }
-    
 }
